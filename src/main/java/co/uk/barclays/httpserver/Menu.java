@@ -39,6 +39,14 @@ public class Menu {
         this.restaurant = restaurant;
     }
 
+    public List<Items> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Items> items) {
+        this.items = items;
+    }
+
     public Integer getId() {
         return this.id;
     }
