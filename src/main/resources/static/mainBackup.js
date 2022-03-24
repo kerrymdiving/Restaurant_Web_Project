@@ -13,17 +13,13 @@ fetch('http://localhost:8080/restaurants')
 
 
     function getAddFormHtml() {
-        return /*html*/ `
-            <article class="restaurant-card">
+        return `
+            <article>
                 <form onsubmit="event.preventDefault();addRestaurant(this);">
-                    <div>
-                        <label>Restaurant Name</label>
-                        <input name="name" required />
-                    </div>
-                    <div>
-                        <label>Image URL for Restaurant</label>
-                        <input name="imageURL" type="url" required />
-                    </div>
+                    <label>Restaurant Name</label>
+                    <input name="name" required/>
+                    <label>Image URL for Restaurant</label>
+                    <input name="image" type="url" required/>
                     <button style="width: 13rem;">Add Restaurant</button>
                 </form>
             </article>
@@ -32,7 +28,7 @@ fetch('http://localhost:8080/restaurants')
 
     function render() {
         let content = data.map((restaurantData, i) => {
-            return /*html*/ `
+            return `
                 <article  class="restaurant-card">
                     <div style="background-image: url('${restaurantData.imageURL}');"></div>
                     <restaurant-card-footer>
@@ -49,7 +45,7 @@ fetch('http://localhost:8080/restaurants')
         appElements.innerHTML = content
 
         if(state.menuOpen) {
-            const modalContent = /*html*/ `
+            const modalContent = `
                     <section class="modal-bg">
                         <article>
                             ${state.menuOpen.map(menu => {
@@ -68,16 +64,15 @@ fetch('http://localhost:8080/restaurants')
     }
 
     function addRestaurant(HTMLform) {
-        // console.log(HTMLform)
         const form = new FormData(HTMLform)
         const name = form.get('name')
-        const imageURL = form.get('imageURL')
+        const image = form.get('image')
         fetch('/restaurants', {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({name, imageURL})
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({name, image})
         })
         .then(res => res.json())
         .then(restaurant => {
