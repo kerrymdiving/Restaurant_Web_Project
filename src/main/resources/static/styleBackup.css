@@ -24,21 +24,13 @@ article {
 }
 .restaurant-card footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     flex: 1 1 auto;
 }
 .restaurant-card footer h2 {
     background-color: white;
     flex: 1 1 auto;
 }
-form {
-    padding: 0 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 50%;
-}
-
 header {
     background-color: aquamarine;
     display: flex;
@@ -51,14 +43,12 @@ aside {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 20vw;
 }
 aside button {
     width: 12rem;
 }
 main {
     background-color: cornflowerblue;
-    width: 80vw;
 }
 footer {
     display: flex;
@@ -68,9 +58,10 @@ footer {
 #page {
     display: grid;
     grid-template-areas: 
-    "header header"
-    "aside main"
-    "footer footer";
+    "header header header header"
+    "aside main main main"
+    "aside main main main"
+    "footer footer footer footer";
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
