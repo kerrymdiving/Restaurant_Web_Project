@@ -3,55 +3,87 @@
     margin: 0;
 }
 #page {
+    /* background-color: blue; */
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 15% auto 10%;
     min-height: 100vh;
 }
+#page header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
 #app {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-auto-rows: auto;
-    
+    gap: 2rem;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
-article {
+/* article {
     border: solid 2px silver;
     border-radius: 2 px;
-}
+} */
 .restaurant-card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: solid 3px silver;
+    border-radius: 2 px;
+    background-color: azure;
 }
-.restaurant-card div {
+.restaurant-card > div {
     height: 16rem;
+    width: 23rem;
     background-size: cover;
     background-position: center top;
 }
-.restaurant-card footer {
+.restaurant-card button {
+    width: 5rem;
+}
+.restaurant-card restaurant-card-footer {
     display: flex;
     justify-content: flex-end;
-    flex: 1 1 auto;
+    align-items: center;
+    background-color: azure;
+    padding:0 0.5rem;
 }
-.restaurant-card footer h2 {
-    background-color: white;
-    flex: 1 1 auto;
+.restaurant-card restaurant-card-footer > h2 {
+    background-color: azure;
+    flex: auto;
 }
-form {
+.restaurant-card form {
     padding: 0 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 50%;
+    justify-content: center;
+    height: 100%;
 }
+.restaurant-card form div {
+    margin: 1rem 0;
+}
+.restaurant-card form div label {
+    display: block;
+}
+.restaurant-card form div input {
+    width: 90%;
+    padding: 0.5rem;
+}
+.restaurant-card form button {
+    padding: 0.5rem;
 
-header {
+}
+/* header {
     background-color: aquamarine;
     display: flex;
     justify-content: center;
-}
+} */
 
-aside {
+/* aside {
     background-color: cadetblue;
     display: flex;
     flex-direction: column;
@@ -61,17 +93,17 @@ aside {
 }
 aside button {
     width: 12rem;
-}
-main {
+} */
+/* main {
     background-color: cornflowerblue;
     width: 80vw;
-}
+} */
 footer {
     display: flex;
     justify-content: end;
     background-color: aqua;
 }
-#page {
+/* #page {
     display: grid;
     grid-template-areas: 
     "header header"
@@ -80,7 +112,7 @@ footer {
     min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 img {
     max-width: 100%;
