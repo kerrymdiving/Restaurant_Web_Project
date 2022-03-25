@@ -29,7 +29,6 @@
     flex-direction: column;
     justify-content: space-between;
     border: solid 3px silver;
-    border-radius: 2 px;
     background-color: azure;
 }
 .restaurant-card > div {
@@ -40,6 +39,7 @@
 }
 .restaurant-card button {
     width: 5rem;
+    background-color: bisque;
 }
 .restaurant-card restaurant-card-footer {
     display: flex;
